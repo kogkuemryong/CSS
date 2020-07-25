@@ -1,0 +1,54 @@
+﻿<!-- 
+* 색상단위
+	- http://www.workwithcolor.com/hsl-color-picker-01.htm(http://www.colorpicker.com)
+	- 키워드를 사용한 색상 적용(red, orange, ...)
+	- RGB 색상단위
+		. rgb(red, green, blue) → 0 ~ 255(0x00~0xFF) 
+        . rgba(... , alpha) →  alpha(투명도:0.0(완전투명)~1.0(완전불투명))
+	- Hex코드 색상 단위 : #000000
+	- HSL 색상단위:hsl(hue(색상), saturation(채도), lightness(명도))
+        . hsla(... , alpha)
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>색상단위</title>
+
+
+<style type="text/css">
+	/* 키워드   - 한정적인 색상만 선택 가능 */
+	h1{background: red;}
+	h2{background: orange;}
+	h3{background: yellow;}
+	h4{background: green;}
+	h5{background: blue;}
+	h6{background: purple;}
+	
+	/* RGB 색상 단위  */
+	h1{background-color:rgb(44, 39, 93);}
+	h2{background-color:rgba(44, 39, 93,0.5);}
+	
+	/* Hex 코드 색상 단위 */
+	h3{background-color:#FF9EC3;}
+	
+	/* HSL 색상 단위 */
+	h4{background-color: hsl(337, 100%, 81%);}
+	h5{background-color: hsla(337, 100%, 81%,0.5);}
+	
+
+</style>
+
+</head>
+<body>
+
+	<h1>Header-1</h1>
+	<h2>Header-2</h2>
+	<h3>Header-3</h3>
+	<h4>Header-4</h4>
+	<h5>Header-5</h5>
+	<h6>Header-6</h6>
+   
+</body>
+</html>

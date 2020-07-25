@@ -1,0 +1,72 @@
+﻿#graph {
+    width: 610px;
+    border: 3px solid black;
+}
+
+.bar {
+    width: 10px; height: 50px;
+    background-color: orange;
+    margin: 5px;
+
+    transition-duration: 5s;
+    
+    /* transition-property 속성(2) = 어떤 속성을 변형할 지 지정.*/
+    transition-property:background-color, width;   /* 색, 폭 변형 */
+    transition-duration: 1s, 5s; /* 변형 시간 : 색의 변형 - 1초, 폭의 변형 - 5초  */
+    
+    /* property duration function delay
+    transition:background-color 1s ease, width 5s linear 1s;
+   */
+
+}
+
+#graph:hover > .bar {
+    width: 600px;
+}
+
+/* transition-delay 속성 */
+/* transition-timing-function 속성 =  수치 변형 함수를 지정. */
+
+/* linear :   */
+.bar:nth-child(1) { 
+    transition-delay: 0s;  /* 애니메이션 효과 - 바로 */
+    transition-timing-function: linear; 
+}
+.bar:nth-child(2) { 
+    transition-delay: 1s; /* 애니메이션 효과 - 1초 후 */
+    transition-timing-function: ease; 
+}
+.bar:nth-child(3) { 
+    transition-delay: 2s;  /* 애니메이션 효과 - 2초 후 */
+    transition-timing-function: ease-in; 
+}
+.bar:nth-child(4) { 
+    transition-delay: 3s;  /* 애니메이션 효과 - 3초 후 */
+    transition-timing-function: ease-in-out;
+}
+.bar:nth-child(5) { 
+    transition-delay: 4s;  /* 애니메이션 효과 - 4초 후 */
+    transition-timing-function: cubic-bezier(.04,1.44,.78,-0.57);
+}
+
+/* transition-property 속성(1) = 어떤 속성을 변형할 지 지정.*/
+#graph:hover > .bar:nth-child(1) {
+    background-color: red;
+    width: 100px;
+}
+#graph:hover > .bar:nth-child(2) { 
+    background-color: blue;
+    width: 300px;
+}
+#graph:hover > .bar:nth-child(3) { 
+    background-color: green;
+    width: 400px;
+}
+#graph:hover > .bar:nth-child(4) { 
+    background-color: yellow;
+    width: 200px;
+}
+#graph:hover > .bar:nth-child(5) { 
+    background-color: pink;
+    width: 400px;
+}

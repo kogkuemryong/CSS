@@ -1,0 +1,53 @@
+﻿<!-- 
+	* 일반구조선택자
+		- CSS3부터 지원하는 선택자.
+		- 일반적으로 자손선택자와 병행해서 많이 사용.
+		- 종 류
+			. :first-child 
+				→ 첫번째에 위치하는 자손을 선택(CSS2.1 지원)
+			. :last-child
+				→ 마지막에 위치하는 자손을 선택.
+			. :nth-child(n)
+				→ 앞에서 n번째 있는 자손을 선택.
+			. :nth-last-child(n)
+				→ 뒤에서 n번째 있는 자손을 선택.
+ -->
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>일반구조선택자</title>
+
+<style type="text/css">
+    /* 수평 정렬 */
+	ul {overlow:hidden;}  
+	li  {
+	list-style:none; /* 글자 앞의 기호 스타일 */
+	padding:15px; /* 텍스트 사이 간격 */
+	float: left
+	;}
+	
+	li:nth-child(2n) {background: yellow;} /* 짝수 선택 */	
+	li:nth-child(2n+1) {background: green;} /* 홀수 선택  */
+	li:first-child {border-radius: 10px 0 0 10px;} /* 첫번째 선택 */
+	li:last-child {border-radius: 0 10px 10px 0 ;} /* 마지막 선택  */
+	 /* border-radius: 10px 0 0 10px; 
+	 (테두리를 둥근 모양을 적용시키는 태그 , 숫자가 높아 질수록 둥근 모양이 된다.)*/
+
+</style>
+
+</head>
+<body>
+
+	<ul>
+		<li>First</li>
+		<li>Second</li>
+		<li>Third</li>
+		<li>Fourth</li>
+		<li>Fifth</li>
+		<li>Sixth</li>
+	</ul>
+
+</body>
+</html>
